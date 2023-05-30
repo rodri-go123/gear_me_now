@@ -1,11 +1,14 @@
 <h1>Items#index</h1>
 <h2>Items</h2>
-<ol>
-  <% items.each do |item| %>
+
+<% @items.each do |item| %>
+  <div class="item_card">
+    <img src="<%= item.image_url %>" alt="a nice sports item" width="200px">
     <%= link_to item_path(item) do %>
-      <li><%= item.name %></li>
+      <h2><%= item.name %></h2>
     <% end %>
-  <% end %>
-</ol>
+    <p><strong><%= item.price %></strong>€ week</p>
+  </div>
+<% end %>
 <br>
 <%= link_to "New Item", new_item_path %>

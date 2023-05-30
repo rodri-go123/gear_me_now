@@ -1,9 +1,9 @@
 <h1>Items#create</h1>
 <p>Find me in app/views/items/create.html.erb</p>
-<%= simple_form_for(item) do |f| %>
+<%= simple_form_for(@item) do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
-  <%= f.input :price %>
+  <%= f.input :price%>
   <%= f.input :image_url %>
   <%= f.submit %>
 <% end %>
