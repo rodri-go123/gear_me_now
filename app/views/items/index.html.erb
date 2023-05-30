@@ -1,14 +1,29 @@
-<h1>Items#index</h1>
-<h2>Items</h2>
+<h3 class="header"><i class="fa-solid fa-fire"></i> GearMeNow</h3>
+<div class="card m-3 rounded-4 p-3 d-flex align-items-center">
+    <form class="search">
+      <input class="item-search"type="text" placeholder="Search.." name="search">
+      <button class="btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+</div>
 
-<% @items.each do |item| %>
-  <div class="item_card">
-    <img src="<%= item.image_url %>" alt="a nice sports item" width="200px">
+  <% @items.each do |item| %>
     <%= link_to item_path(item) do %>
-      <h2><%= item.name %></h2>
-    <% end %>
-    <p><strong><%= item.price %></strong>€ week</p>
+        <div class="item_card">
+          <img src="<%= item.image_url %>" alt="a nice sports item" width="200px">
+          <div class="card_name">
+              <h2 class="title"><%= item.name %></h2>
+            <p><strong><%= item.price %></strong>€ week</p>
+          </div>
+        </div>
+     <% end %>
+  <% end %>
+  <br>
+  <div class="icons mb-3">
+        <i class="fa-solid fa-person-running"></i>
+      <%= link_to new_item_path do %>
+        <i class="new-item fa-solid fa-circle-plus"></i>
+        <% end %>
+      <%= link_to new_user_session_path do %>
+        <i class="fa-solid fa-right-to-bracket"></i>
+        <% end %>
   </div>
-<% end %>
-<br>
-<%= link_to "New Item", new_item_path %>
