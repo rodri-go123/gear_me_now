@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   resources :items, only: %i[index new create show] do
     resources :rental, only: %i[new create]
   end
-  # change is to items#index later!
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
