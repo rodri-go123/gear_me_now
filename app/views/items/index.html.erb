@@ -1,0 +1,20 @@
+<h1>Items#index</h1>
+<p>Find me in app/views/items/index.html.erb</p>
+<% items = ["TennisRacket", "StandUpPaddle", "Football", "Volleyball", "ClimbingRope"] %>
+<%= item = "dog" %>
+<h2>Items</h2>
+<ol>
+  <% items.each do |item| %>
+    <li><%= item.capitalize %></li>
+  <% end %>
+</ol>
+<br>
+<h1>Items#create</h1>
+<p>Find me in app/views/items/create.html.erb</p>
+<%= simple_form_for(item) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.input :image_url %>
+  <%= f.submit %>
+<% end %>
