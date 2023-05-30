@@ -1,0 +1,27 @@
+<div class ="dashboard-header">
+  <h1>Hi <%= current_user.first_name %></h1>
+</div>
+
+<h2>My bookings</h2>
+<% @rentals.each do |rental| %>
+  <% item = rental.item %>
+  <%= link_to item_path(item) do %>
+    <div class="dashboard-card rental">
+      <img src="<%= item.image_url %>" alt="a nice sports item" width="200px">
+        <h2><%= item.name %></h2>
+      <p>From <%= rental.start_date %></p>
+      <p>To <%= rental.end_date %></p>
+    </div>
+  <% end %>
+<% end %>
+
+<h2>My gear for rent</h2>
+<% @items.each do |item| %>
+  <%= link_to item_path(item) do %>
+    <div class="dashboard-card item">
+      <img src="<%= item.image_url %>" alt="a nice sports item" width="200px">
+        <h2><%= item.name %></h2>
+      <p><strong><%= item.price %></strong>€ week</p>
+    </div>
+  <% end %>
+<% end %>
