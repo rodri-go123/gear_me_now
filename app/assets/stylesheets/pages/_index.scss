@@ -1,2 +1,72 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.header{
+  margin-top: 12px;
+  margin-left: 16px;
+}
+
+.item_card{
+  overflow: hidden;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 16px;
+  padding-top: 20px;
+}
+
+.card_name{
+  padding: 16px;
+  display:flex;
+  justify-content: space-between;
+  position: relative;
+  font-size: 12px;
+  align-items: center;
+  width: 80%;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+p {
+  margin: 0;
+}
+
+.title{
+  font-size: 16px;
+  margin: 0;
+}
+
+.btn-search{
+  background-color: white;
+  border: none;
+}
+
+.item-search{
+  background-color: white;
+  border: none;
+}
+input:focus-visible{
+ outline: none;
+}
+
+.icons{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 28px;
+  opacity: 0.5;
+  width: 100vw;
+  &:hover {
+    opacity: 1;
+    a {
+    color: black;
+
+    transition: 0.4s;
+    text-decoration: none;
+    }
+  }
+}
