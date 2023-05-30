@@ -5,6 +5,11 @@
 <p><strong><%= @item.price %></strong>€ week</p>
 <p>Leased by <strong><%= "#{@item.user.first_name.capitalize} #{@item.user.last_name.capitalize}" %></strong></p>
 <%# TODO: Add link to the create a new reservation %>
+<%= simple_form_for([@item, @rental]) do |f| %>
+  <%= f.input :start_date, as: :date, html5: true %>
+  <%= f.input :end_date, as: :date, html5: true %>
+  <%= f.submit %>
+<% end %>
 
 <div class="navbar">
 <%= link_to "Back to List", root_path %>

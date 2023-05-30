@@ -9,6 +9,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @rental = Rental.new
   end
 
   def create
