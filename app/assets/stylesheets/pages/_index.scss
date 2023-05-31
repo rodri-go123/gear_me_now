@@ -1,5 +1,7 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "login/signup";
+@import "show";
 
 .header{
   margin-top: 12px;
@@ -51,7 +53,7 @@ p {
   justify-content: space-around;
   font-size: 28px;
   opacity: 0.5;
-  width: 100vw;
+  // width: 100vw;
   &:hover {
     opacity: 1;
     a {

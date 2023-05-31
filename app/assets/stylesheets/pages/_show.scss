@@ -30,19 +30,19 @@
 }
 
 .fa-solid{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-around;
   font-size: 28px;
   opacity: 0.5;
-  width: 100vw;
-  &:hover {
-    opacity: 1;
-    a {
-    color: black;
+  // width: 100vw;
+  // &:hover {
+  //   opacity: 1;
+  //   a {
+  //   color: black;
 
-    transition: 0.4s;
-    text-decoration: none;
-    }
-  }
+  //   transition: 0.4s;
+  //   text-decoration: none;
+  //   }
+  // }
 }
