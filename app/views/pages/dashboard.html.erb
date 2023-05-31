@@ -6,8 +6,8 @@
 <% @rentals.each do |rental| %>
   <% item = rental.item %>
   <%= link_to item_path(item) do %>
-    <div class="dashboard-card rental">
-      <%= image_tag(item.image_url, alt: "a nice sports item", :class => "dashboard-image mt-3 rounded-4") %>
+    <div class="item_card">
+      <%= image_tag(item.image_url, alt: "a nice sports item", class: "index-image rounded-4") %>
         <h2><%= item.name %></h2>
       <p>From <%= rental.start_date %></p>
       <p>To <%= rental.end_date %></p>
@@ -18,8 +18,8 @@
 <h2>My gear for rent</h2>
 <% @items.each do |item| %>
   <%= link_to item_path(item) do %>
-    <div class="dashboard-card item">
-      <%= image_tag(item.image_url, alt: "a nice sports item", :class => "dashboard-image mt-3 rounded-4") %>
+    <div class="item_card">
+      <%= image_tag(item.image_url, alt: "a nice sports item", class: "index-image rounded-4") %>
         <h2><%= item.name %></h2>
       <p><strong><%= item.price %></strong>€ week</p>
     </div>

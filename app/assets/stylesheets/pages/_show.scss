@@ -6,6 +6,10 @@
   align-items: center;
 }
 
+body {
+  background-color: white;
+}
+
 .container{
   background-color: white;
 }
@@ -31,7 +35,7 @@
 }
 
 .banner{
-  background-color: var(--bs-body-bg);
+  background-color: white;
 }
 
 .icon-show-back{
