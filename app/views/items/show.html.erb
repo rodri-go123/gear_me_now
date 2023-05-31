@@ -1,16 +1,20 @@
-<h1>Items#show</h1>
-<img src="<%= @item.image_url %>" alt="a nice sports item" width="200px">
-<h2><%= @item.name %></h2>
-<p><%= @item.description %></p>
-<p><strong><%= @item.price %></strong>€ week</p>
-<p>Leased by <strong><%= "#{@item.user.first_name.capitalize} #{@item.user.last_name.capitalize}" %></strong></p>
-<%# TODO: Add link to the create a new reservation %>
-<%= simple_form_for([@item, @rental]) do |f| %>
-  <%= f.input :start_date, as: :date, html5: true %>
-  <%= f.input :end_date, as: :date, html5: true %>
-  <%= f.submit %>
-<% end %>
-
-<div class="navbar">
-<%= link_to "Back to List", root_path %>
+<div class="container">
+  <img class="show_image mt-3 rounded-4"src="<%= @item.image_url %>" alt="a nice sports item" width="100%">
+    <div class="header-show m-2">
+      <h2><%= @item.name %></h2>
+      <p><strong><%= @item.price %></strong>€ week</p>
+    </div>
+  <p><%= @item.description %></p>
+  <p>Leased by <strong><%= "#{@item.user.first_name.capitalize} #{@item.user.last_name.capitalize}" %></strong></p>
+  <%# TODO: Add link to the create a new reservation %>
+    <%= simple_form_for([@item, @rental]) do |f| %>
+        <%= f.input :start_date, as: :date, html5: true %>
+        <%= f.input :end_date, as: :date, html5: true %>
+        <%= f.submit class:"btn-create" %>
+    <% end %>
+</div>
+<div class="banner">
+  <%= link_to root_path do %>
+     <i class="fa-solid fa-circle-chevron-left mt-2 mb-2"></i>
+  <% end %>
 </div>
