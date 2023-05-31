@@ -1,5 +1,5 @@
 <div class="container">
-  <img class="show_image mt-3 rounded-4"src="<%= @item.image_url %>" alt="a nice sports item" width="100%">
+  <%= image_tag(@item.image_url, alt: "a nice sports item", :class => "show-image mt-3 rounded-4") %>
     <div class="header-show m-2">
       <h2><%= @item.name %></h2>
       <p><strong><%= @item.price %></strong>€ week</p>
