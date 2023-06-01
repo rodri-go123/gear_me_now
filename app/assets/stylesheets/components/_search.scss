@@ -1,0 +1,27 @@
+.search-bar {
+  z-index: 100;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+  width: 90vw;
+  left: 5vw;
+  height: 50px;
+  padding: 0px 10px 0px 10px;
+  background-color: white;
+  border-radius: 150px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 4px rgba(62, 61, 61, 0.5);
+}
+
+.search-bar form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  padding: 10px;
+}
+
+.btn-search{
+  background-color: white;
+  border: none;
+}

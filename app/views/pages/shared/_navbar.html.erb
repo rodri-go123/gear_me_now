@@ -1,0 +1,22 @@
+<div class = "nav-menu">
+  <div class="icons mb-3">
+      <%# Link to index page %>
+      <%= link_to root_path do %>
+        <i class="fa-solid fa-house"></i>
+      <% end %>
+      <%# Link to add item %>
+      <%= link_to new_item_path do %>
+        <i class="new-item fa-solid fa-circle-plus"></i>
+      <% end %>
+      <%# Link to dashboard or sign-in %>
+      <% if user_signed_in? %>
+        <%= link_to dashboard_path do %>
+          <i class="fa-solid fa-circle-user"></i>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_session_path do %>
+          <i class="fa-solid fa-right-to-bracket"></i>
+        <% end %>
+      <% end %>
+  </div>
+</div>

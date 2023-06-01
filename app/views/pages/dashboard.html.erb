@@ -6,7 +6,7 @@
 <% @rentals.each do |rental| %>
   <% item = rental.item %>
   <%= link_to item_path(item) do %>
-    <div class="item_card">
+    <div class="small_card">
       <%= image_tag(item.image_url, alt: "a nice sports item", class: "index-image rounded-4") %>
         <h2><%= item.name %></h2>
       <p>From <%= rental.start_date %></p>
@@ -18,10 +18,12 @@
 <h2>My gear for rent</h2>
 <% @items.each do |item| %>
   <%= link_to item_path(item) do %>
-    <div class="item_card">
+    <div class="small_card">
       <%= image_tag(item.image_url, alt: "a nice sports item", class: "index-image rounded-4") %>
         <h2><%= item.name %></h2>
       <p><strong><%= item.price %></strong>€ week</p>
     </div>
   <% end %>
 <% end %>
+
+<%= render "pages/shared/navbar" %>
