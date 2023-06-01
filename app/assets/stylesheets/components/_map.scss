@@ -1,0 +1,26 @@
+.mapboxgl-popup {
+  max-width: 200px;
+  z-index: 10 !important;
+}
+
+.mapboxgl-popup-content a {
+  border: 0 !important;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  box-shadow: 0px 0px 4px rgba(62, 61, 61, 0.5) !important;
+}
+
+.mapboxgl-popup-close-button {
+  display: none;
+}
+
+.map-image {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.info-window-title {
+  font-size: 16px;
+}
