@@ -9,8 +9,7 @@ class PagesController < ApplicationController
 
   def map
     @items = Item.all
-    raise
-
+   
     if params[:query].present?
       @items = @items.super_search(params[:query])
     end
