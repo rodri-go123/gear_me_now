@@ -2,6 +2,10 @@ class ItemsController < ApplicationController
   before_action :set_item, only: %i[show destroy]
   def index
     @items = Item.all
+
+    if params[:query].present?
+      @items = @items.super_search(params[:query])
+    end
   end
 
   def new

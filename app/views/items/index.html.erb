@@ -3,10 +3,14 @@
 </div>
 
 <div class="search-bar">
-  <form>
-    <input class="input-box-solid"type="text" placeholder="Search..." name="search">
-    <button class="btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-  </form>
+  <%= form_with url: root_path, method: :get do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "input-box-solid",
+            placeholder: "What gear do you need today?"
+        %>
+      <button class="btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <% end %>
 </div>
 
   <% @items.each do |item| %>
