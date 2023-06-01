@@ -1,0 +1,19 @@
+  <br>
+  <div class="search-bar">
+  <%= form_with url: map_path, method: :get do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "input-box-solid",
+            placeholder: "Search gear... 💪"
+        %>
+      <button class="btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <% end %>
+</div>
+  <%# <%= render "pages/shared/search" > %>
+
+  <div style="width: 100vw; height: 98vh; position: absolute; bottom: 60px; left: 0;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+  <%= render "pages/shared/navbar" %>

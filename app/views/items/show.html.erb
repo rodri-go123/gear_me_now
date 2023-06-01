@@ -7,15 +7,27 @@
     <div class="info mb-3 mt-3">
       <p><%= @item.description %></p>
       <hr style="width:100%;text-align:left;margin-left:0">
-      <p>Leased by <strong><%= "#{@item.user.first_name.capitalize} #{@item.user.last_name.capitalize}" %></strong></p>
+      <% if current_user == @item.user %>
+        <p>Leased by <strong>You</strong></p>
+      <% else %>
+        <p>Leased by <strong><%= "#{@item.user.first_name.capitalize} #{@item.user.last_name.capitalize}" %></strong></p>
+      <% end %>
     <hr style="width:100%;text-align:left;margin-left:0">
     </div>
-  <%# TODO: Add link to the create a new reservation %>
+  <%# New Reservation %>
+  <% unless current_user == @item.user %>
     <%= simple_form_for([@item, @rental]) do |f| %>
         <%= f.input :start_date, as: :date, html5: true %>
         <%= f.input :end_date, as: :date, html5: true %>
         <%= f.submit "Book", class:"btn-create" %>
     <% end %>
+  <% end %>
+
+  <div style="width: 100%; height: 200px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
 </div>
 
 <%= render "pages/shared/navbar" %>

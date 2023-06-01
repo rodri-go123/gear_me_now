@@ -1,0 +1,6 @@
+ <%= link_to item_path(item) do %>
+  <%= image_tag(item.image_url, alt: "a nice sports item", class: "map-image rounded-4") %>
+  <h3 class="info-window-title"><%= item.name %></h3>
+  <p><strong><%= item.price %></strong>€ week</p>
+  <p><%= item.address %></p>
+<% end %>

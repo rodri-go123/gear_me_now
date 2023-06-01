@@ -7,4 +7,5 @@ Rails.application.routes.draw do
     # resources :pages, only: %i[dashboard]
   end
   get '/dashboard', to: 'pages#dashboard'
+  get '/map', to: 'pages#map'
 end

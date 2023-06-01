@@ -25,16 +25,16 @@ puts "Finished!"
 
 puts "Creating items"
 items = [
-  { user: rodrigo, name: "Ping Pong Racket", description: "Large face for increased tolerance, an oval grip for comfort and an aluminum frame for stability, the TR100 is the ideal racquet for beginners.", price: 15, image_url: "items/pingpong.jpg" },
-  { user: amanda, name: "Baseball Kit", description: "Really nice baseball kit for beginners to intermediate players. Everything comes clean and well maintained. Enjoy your baseballing!", price: 150, image_url: "items/baseball.jpg" },
-  { user: rodrigo, name: "Mountain Bike", description: "This bikepacking beast is ready to tackle the gnarliest trails all around the world. Book it for an unforgettable adventure.", price: 300, image_url: "items/mtb.jpg" },
-  { user: amanda, name: "Stand-up paddle set", description: "Stand up paddling board, SUP board as an inflatable complete set, stand up paddle board with double PVC layering, optimal from 60 kg max 130 kg - 330 x 78 x 15 cm", price: 25, image_url: "items/paddle-board.jpg" },
-  { user: alex, name: "Skateboard", description: "14 years old and have no friends? Hit the skate park with this beauty and impress everybody at your school. Book at your own risk.", price: 30, image_url: "items/skate.jpg" },
-  { user: rodrigo, name: "Roller Blades", description: "90s fever? Seen too much Stranger Things lately? Go on a nostalgia trip and hit the roller disco with these bad boys. You will never be the same again.", price: 50, image_url: "items/rollerblades.jpg" },
-  { user: amanda, name: "Folding Bike", description: "Want to be functional AND look like a hipster? This baby is perfect for you. It will take you anywhere, fold itself into a neat little half-bike and it is sure to make you stand out wherever you are.", price: 999, image_url: "items/folding-bike.jpg" },
-  { user: alex, name: "Volleyball Ball", description: "White, spherical, can handle being thrown and loves the sand. Your ideal companion fo this summer season.", price: 20, image_url: "items/volleyball.jpg" },
-  { user: rodrigo, name: "Basketball Hoop", description: "Bored of your career? Want to be like LeBron James? This basketball hoop is just for you.", price: 150, image_url: "items/basket-hoop.jpg" },
-  { user: amanda, name: "Mountaneering Gear", description: "Humans are stupid. Say goodbye to society and go somewhere nice in the mountains knowing that you're kept safe by this items. Previous owner might have died.", price: 200, image_url: "items/climbing.jpg" }
+  { user: rodrigo, name: "Ping Pong Racket", description: "Large face for increased tolerance, an oval grip for comfort and an aluminum frame for stability, the TR100 is the ideal racquet for beginners.", price: 15, image_url: "items/pingpong.jpg", address: "Koln Dom"},
+  { user: amanda, name: "Baseball Kit", description: "Really nice baseball kit for beginners to intermediate players. Everything comes clean and well maintained. Enjoy your baseballing!", price: 150, image_url: "items/baseball.jpg", address: "Nippes, Koln"},
+  { user: rodrigo, name: "Mountain Bike", description: "This bikepacking beast is ready to tackle the gnarliest trails all around the world. Book it for an unforgettable adventure.", price: 300, image_url: "items/mtb.jpg", address: "Frechen, Koln, Germany"},
+  { user: amanda, name: "Stand-up paddle set", description: "Stand up paddling board, SUP board as an inflatable complete set, stand up paddle board with double PVC layering, optimal from 60 kg max 130 kg - 330 x 78 x 15 cm", price: 25, image_url: "items/paddle-board.jpg", address: "Ehrenfeld, Koln" },
+  { user: alex, name: "Skateboard", description: "14 years old and have no friends? Hit the skate park with this beauty and impress everybody at your school. Book at your own risk.", price: 30, image_url: "items/skate.jpg", address: "Altstadt, Cologne" },
+  { user: rodrigo, name: "Roller Blades", description: "90s fever? Seen too much Stranger Things lately? Go on a nostalgia trip and hit the roller disco with these bad boys. You will never be the same again.", price: 50, image_url: "items/rollerblades.jpg", address: "Breite Str, Cologne, Germany"},
+  { user: amanda, name: "Folding Bike", description: "Want to be functional AND look like a hipster? This baby is perfect for you. It will take you anywhere, fold itself into a neat little half-bike and it is sure to make you stand out wherever you are.", price: 999, image_url: "items/folding-bike.jpg", address: "Im Klapperhof, Cologne, Germany" },
+  { user: alex, name: "Volleyball Ball", description: "White, spherical, can handle being thrown and loves the sand. Your ideal companion fo this summer season.", price: 20, image_url: "items/volleyball.jpg", address: "Mediapark, Koln, Germany" },
+  { user: rodrigo, name: "Basketball Hoop", description: "Bored of your career? Want to be like LeBron James? This basketball hoop is just for you.", price: 150, image_url: "items/basket-hoop.jpg", address: "Sudstadt, Cologne, Germany" },
+  { user: amanda, name: "Mountaneering Gear", description: "Humans are stupid. Say goodbye to society and go somewhere nice in the mountains knowing that you're kept safe by this items. Previous owner might have died.", price: 200, image_url: "items/climbing.jpg", address: "Pulheim, Cologne" }
 ]
 
 items.each do |item|
