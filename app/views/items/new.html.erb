@@ -1,8 +1,9 @@
 <div class="card m-3 rounded-4 p-3 d-flex align-items-center">
-<h3 class="header-new"><i class="fa-solid fa-fire"></i> AddGearNow</h3>
+<h3 class="header-new"><i class="logo-color fa-solid fa-fire"></i> AddGearNow</h3>
       <%= simple_form_for(@item) do |f| %>
       <%= f.input :name %>
-      <%= f.input :description %>
+      <%= f.input :description,
+                   hint: ("*size, condition, brand, or color") %>
       <%= f.input :price%>
       <%= f.input :image_url %>
       <%= f.submit 'Create', class: 'btn-main form-actions' %>
