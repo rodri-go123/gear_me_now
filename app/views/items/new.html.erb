@@ -5,10 +5,7 @@
       <%= f.input :description %>
       <%= f.input :price%>
       <%= f.input :image_url %>
-      <%= f.submit 'Create', class: 'form-actions', id: 'btn-signup' %>
+      <%= f.submit 'Create', class: 'btn-main form-actions' %>
     <% end %>
-
-  <%= link_to root_path do %>
-    <i class="icon-show-back fa-solid fa-circle-chevron-left mt-3 mb-3"></i>
-  <% end %>
 </div>
+<%= render "pages/shared/navbar" %>
