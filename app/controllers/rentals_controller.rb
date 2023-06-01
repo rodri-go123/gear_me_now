@@ -9,7 +9,7 @@ class RentalsController < ApplicationController
     if @rental.save
       redirect_to item_path(@item)
     else
-      raise
+      render "items/show", status: :unprocessable_entity
     end
   end
 
