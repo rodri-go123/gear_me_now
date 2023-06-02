@@ -16,9 +16,12 @@
     </div>
   <%# Options to edit %>
   <% if current_user == @item.user %>
-    <%= link_to 'Edit this item', edit_item_path(@item) %>
-    <hr style="width:100%;text-align:left;margin-left:0">
-    <%= link_to 'Delete this item', item_path(@item), data: { turbo_method: "delete", turbo_confirm: "Are you sure?" } %>
+    <div class="d-flex align-items-center">
+      <%= link_to 'Edit item', edit_item_path(@item), class: "btn-edit" %>
+      <%= link_to item_path(@item),class: "btn-delete", data: { turbo_method: "delete", turbo_confirm: "Are you sure?" } do %>
+        <i class="fa-solid fa-trash-can"></i>
+      <% end %>
+    </div>
   <% else %>
   <%# New Reservation %>
     <%= simple_form_for([@item, @rental]) do |f| %>
