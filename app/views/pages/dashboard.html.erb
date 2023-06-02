@@ -11,8 +11,7 @@
         <%= image_tag(item.image_url, alt: "a nice sports item", class: "index-image") %>
         <div class="ms-4 align-items-column">
           <h5 class="mt-4"><%= item.name %></h5>
-          <p class="card_details_dashboard">From <%= rental.start_date %></p>
-          <p class="card_details_dashboard">To <%= rental.end_date %></p>
+          <p class="card_details_dashboard">Return by <%= rental.end_date %></p>
         </div>
       </div>
     <% end %>
