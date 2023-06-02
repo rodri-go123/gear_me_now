@@ -20,8 +20,13 @@
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     <hr style="width:100%;text-align:left;margin-left:0">
     </div>
+  <%# Options to edit %>
+  <% if current_user == @item.user %>
+    <%= link_to 'Edit this item', edit_item_path(@item) %>
+    <hr style="width:100%;text-align:left;margin-left:0">
+    <%= link_to 'Delete this item', item_path(@item), data: { turbo_method: "delete", turbo_confirm: "Are you sure?" } %>
+  <% else %>
   <%# New Reservation %>
-  <% unless current_user == @item.user %>
     <%= simple_form_for([@item, @rental]) do |f| %>
         <%= f.input :start_date, as: :date, html5: true %>
         <%= f.input :end_date, as: :date, html5: true %>
