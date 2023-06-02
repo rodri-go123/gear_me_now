@@ -24,3 +24,27 @@
 .info-window-title {
   font-size: 16px;
 }
+
+.map {
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  height: 0;
+  pointer-events: none !important;
+}
+
+.dropdown {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.block {
+  display: block;
+  height: 200px;
+  margin-top: 10px;
+}
+
+.turn {
+  transform: rotate(-0.25turn);
+}
