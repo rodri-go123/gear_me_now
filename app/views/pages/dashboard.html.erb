@@ -2,6 +2,7 @@
   <h3 class="header"><i class="logo-color fa-solid fa-fire"></i>&nbsp;Hi <%= current_user.first_name %></h3>
 </div>
 <div class="container">
+
   <h2 class="header-dash">MyBookings</h2>
   <% @rentals.each do |rental| %>
     <% item = rental.item %>
@@ -30,6 +31,7 @@
       </div>
     <% end %>
   <% end %>
+
 </div>
 <br>
 <br>
