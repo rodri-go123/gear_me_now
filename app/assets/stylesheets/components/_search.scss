@@ -14,13 +14,17 @@
 
 }
 
+.search-bar > form > input {
+  border: 0 !important;
+}
+
 .search-bar form {
   width: 100%;
   display: flex;
   justify-content: space-between;
   background-color: transparent;
   padding: 10px;
-  
+
 }
 
 .btn-search{

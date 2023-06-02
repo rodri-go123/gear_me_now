@@ -2,7 +2,8 @@
   <%= f.input :name %>
   <%= f.input :description,
               hint: ("*size, condition, brand, or color") %>
-  <%= f.input :price%>
+  <%= f.input :price %>
+  <%= f.input :address, required: true %>
   <%= f.input :image_url %>
   <%= f.submit 'Save', class: 'btn-main form-actions' %>
 <% end %>
