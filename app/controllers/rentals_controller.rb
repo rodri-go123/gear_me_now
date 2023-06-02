@@ -7,7 +7,9 @@ class RentalsController < ApplicationController
     @rental.user = current_user
 
     if @rental.save
-      redirect_to item_path(@item)
+      # redirect_to item_path(@item)
+      flash[:notice] = 'Booking successfull!'
+      redirect_to dashboard_path
     else
       render "items/show", status: :unprocessable_entity
     end
