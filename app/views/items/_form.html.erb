@@ -1,0 +1,8 @@
+<%= simple_form_for(item) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description,
+              hint: ("*size, condition, brand, or color") %>
+  <%= f.input :price%>
+  <%= f.input :image_url %>
+  <%= f.submit 'Save', class: 'btn-main form-actions' %>
+<% end %>

@@ -1,12 +1,11 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: %i[show destroy]
+  before_action :set_item, only: %i[show edit destroy update]
   def index
     @items = Item.all
 
     if params[:query].present?
       @items = @items.super_search(params[:query])
     end
-
   end
 
   def new
@@ -36,7 +35,17 @@ class ItemsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    @item.update(item_params)
+    redirect_to item_path(@item)
+  end
+
   def destroy
+    @item.destroy
+    redirect_to items_path, status: :see_other
   end
 
   private
